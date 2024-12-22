@@ -1,0 +1,60 @@
+
+<!--[Data Binding]
+    - Interpolation - {{}}
+    - Property Binding - []
+    - Two Way data binding [(ngModel)]
+    - Event Binding
+-->
+
+<!--Interpolación para acceder a los datos de las variables-->
+<div class="row">
+    <div class="col-3">
+        <p>{{firstName}}</p> 
+    </div>
+    <div class="col-3">
+        <p>{{version}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{currentDate}}</p>
+    </div>
+    <div class="col-3">
+        <p>{{selectedState}}</p>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-3">
+        <!--Property binding para meter el valor de variables-->
+        <input type="text" [value] ="firstName" class="form-control"/>
+    </div>
+    <div class="col-3">
+        <!--Property binding para cambiar propiedades-->
+        <input [type]="inputType">
+    </div>
+    <div class="col-3">
+        <!--Data binding de 2 vías. variable <==> Input 
+        Necesita que importes FormsModule en el componente
+        -->
+        <input type="text" [(ngModel)] = "firstName"/>
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectedState">
+            <option value="MH">MH</option>
+            <option value="MP">MP</option>
+            <option value="Goa">Goa</option>
+        </select>  
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <!--Event binding para acciones al pulsar botón-->
+        <button class="btn btn-success" (click)="showWelcomeAlert()">Show Alert</button>  
+    </div>
+    <div class="col-3">
+        <!--Event binding para acciones al pulsar botón-->
+        <button class="btn btn-success" (click)="showMessage('WelcomeReact')">Show Alert</button>  
+    </div>
+</div>
+
+

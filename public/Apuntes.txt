@@ -1,0 +1,44 @@
+[]
+
+[COMPONENTES]
+
+ng generate component COMPONENTES
+-- Para poder ser usado tiene que importarse en app.component.ts
+
+import { Component } from '@angular/core';
+import { RolesComponent } from './roles/roles.component';
+import { MasterComponent } from './master/master.component';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet,RolesComponent,MasterComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'angular_18_tutorial';
+}
+
+
+[BOOTSTRAP]
+
+1.- Abre una terminal e instálalo: npm i bootstrap.
+2.- En el archivo angular.json pon la ruta para que puedas usar esa librería:
+
+"styles": [
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+
+[DIRECTIVAS]
+
+- Estructurales
+
+  - ngIf
+  - ngFor
+
+- Atributos
+
+  -ngClass
+  -ngStyle
