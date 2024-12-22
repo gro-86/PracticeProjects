@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { DesignationComponent } from '../designation/designation.component';
 import { RolesComponent } from '../roles/roles.component';
 
